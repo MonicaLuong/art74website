@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- link to style sheet  -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <title>MoNiK_a Lu</title> <!-- Your Name/Website Name Here -->
+    <script type=“<canvas data-processing-sources=".pde"></canvas>” src=“processing.js”></script>
+
+</head> 
+    <body>
+        <header>
+            <div class="sidenav">
+                <a href="index.html">Home</a>
+                <a href="work.html">Work</a>
+                <a href="artiststatement.html">Artist Statement</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </header>
+        
+        <!-- MAIN (Center website) -->
+<div class="main">
+<br><BR><br>
+<h1>My Work <img src= "images/mouse.png" style="position: relative;top:37px;"></h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('art74')"> ART 74</button>
+  <button class="btn" onclick="filterSelection('photo40')"> PHTO 40</button>
+  <button class="btn" onclick="filterSelection('cosplay')"> Cosplay</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column art74">
+    <div class="content">
+      
+      <a href="images/Monica_Luong_Glitch.jpg"><img src="images/Monica_Luong_Glitchcrop.jpg" alt="Glitch_art" style="width: 300px"></a>
+      <h3>My Work</h3>
+      <p>Lorem ipsum..</p>
+        
+    </div>
+  </div>
+  <div class="column art74">
+    <div class="content">
+        <a href="images/Monica_Luong_Composite.jpg"><img src="images/Monica_Luong_Compositecrop.jpg" alt="composite_art" style="width:300px"></a>
+      <h3>My Work</h3>
+      <p>Lorem ipsum..</p>
+    </div>
+  </div>
+  <div class="column art74">
+    <div class="content">
+        <a href="images/photoshopalmond.jpg"><img src="images/photoshopalmondcrop.jpg" alt="photoshop" style="width:300px"></a>
+      <h3>Colored Almond</h3>
+      <p>This was a quick edit to help me relearn how to use photoshop.</p>
+    </div>
+  </div>
+  <div class="column art74">
+    <div class="content">
+         <a href="https://vimeo.com/255500793"><img src="images/video1crop.jpg" alt="video1" style="width:300px"></a>
+    
+      <h3>Too far and too close</h3>
+      <p>A short video project made to experiment with premiere.</p>
+    </div>
+  </div>
+    </div>
+    <div class="row">
+    <div class="column art74">
+    <div class="content">
+      <a href="https://vimeo.com/257999015"><img src="images/video2crop.jpg" alt="video2" style="width:300px"></a>
+      <h3>Fighting Cats</h3>
+      <p>My second attempt at expanding my ideas in video art, enjoy my adorable cats trying to destroy each other.</p>
+    </div>
+  </div>
+    <div class="column art74">
+    <div class="content">
+        <a href="https://soundcloud.com/monica-luong/funeral-vibes"><img src="images/grandmacrop.jpg" alt="grandma" style="width:300px"></a>
+      <h3>Funeral Vibes</h3>
+      <p>Sound art inspired by my late grandmother.</p>
+    </div>
+  </div>
+    <div class="column art74">
+    <div class="content">
+        <a href="catsordogs.tk"><img src="images/websitecrop.jpg" alt="websitelink" style="width:300px"></a>
+      <h3>Catsordogs.tk</h3>
+      <p>Was supposed to be a net art project but became a informational page about dogs and cats.</p>
+    </div>
+  </div>
+    <div class="column photo40">
+    <div class="content">
+        <a href="images/nose.jpg"><img src="images/nose.jpg" alt="nose" style="width:300px"></a>
+      <h3>Beauty pains</h3>
+      <p>This photo was taken apart of a series of me during my skin care routine</p>
+    </div>
+  </div>
+    </div>
+    
+    
+    <div class="row">
+    <div class="column cosplay">
+    <div class="content">
+        <a href="images/elin.jpg"><img src="images/elincrop.jpg" alt="elin" style="width:300px"></a>
+      <h3>Elin</h3>
+      <p>PC:Jeff Davis</p>
+    </div>
+        </div>
+    <div class="column cosplay">
+     <div class="content">
+        <a href="images/aikatsu.jpg"><img src="images/aikatsu.jpg" alt="aikatsu" style="width:300px"></a>
+      <h3>Aikatsu summer uniform</h3>
+      <p>PC: Jeff Davis</p>
+    </div>
+    </div>
+    <div class="column art74">
+     <div class="content">
+        <a href="processing.html"><img src="images/linescrop.jpg" alt="nose" style="width:300px"></a>
+            <h3>Coloring</h3>
+            <p>Processing as art</p>
+    </div>
+        </div>
+        <div class="column art74">
+     <div class="content">
+        <a href="https://vimeo.com/269768416"><img src="images/howareyoucrop.jpg" alt="video3" style="width:300px"></a>
+      <h3>How was your day?</h3>
+      <p>Final project of my ART74 class, I decided to create a video.</p>
+    </div>
+        </div>
+  </div>    
+    
+    
+    <!-- END GRID-->
+</div>
+<script>
+    filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1); 
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+
+    
+
+<!-- END MAIN -->
+    </div>
+
+        <footer>
+            <p> &copy; Monica Luong 2018</p>
+        </footer>
+    </body>
+</html>
